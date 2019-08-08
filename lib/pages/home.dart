@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:nyf_mobile/components/balance_card.dart';
+import 'package:nyf_mobile/components/transaction_list.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -14,6 +15,9 @@ class HomePage extends StatelessWidget {
         Padding(
           padding: EdgeInsets.all(16.0),
           child: BalanceCard(),
+        ),
+        Expanded(
+          child: TransactionList(),
         ),
       ],
     );
