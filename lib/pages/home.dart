@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:nyf_mobile/components/balance_card.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -8,8 +9,13 @@ class HomePage extends StatelessWidget {
   }
 
   Widget _buildHome() {
-    return Center(
-      child: Text("Da home page."),
+    return Column(
+      children: <Widget>[
+        Padding(
+          padding: EdgeInsets.all(16.0),
+          child: BalanceCard(),
+        ),
+      ],
     );
   }
 }
