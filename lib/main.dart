@@ -23,18 +23,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blueGrey,
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("Hello"),
-        ),
-        body: HomePage(),
-        bottomNavigationBar: NavigationBar(),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        floatingActionButton: FloatingActionButton(
-          tooltip: 'Increment',
-          child: new Icon(Icons.add),
-        ),
-      ),
+      home: NavigationBar(),
     );
   }
 }

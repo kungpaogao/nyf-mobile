@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
-class HomePage extends StatelessWidget {
+class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return _buildHome();
+    return _buildProfile();
   }
 
-  Widget _buildHome() {
+  Widget _buildProfile() {
     return Center(
-      child: Text("Da home page."),
+      child: Text("This is the profile page."),
     );
   }
 }
