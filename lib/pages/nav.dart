@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:nyf_mobile/pages/home.dart';
 import 'package:nyf_mobile/pages/profile.dart';
 
-class NavigationBar extends StatefulWidget {
-  NavigationBar({Key key}) : super(key: key);
+class Navigation extends StatefulWidget {
+  Navigation({Key key}) : super(key: key);
 
   @override
-  _NavigationBarState createState() => _NavigationBarState();
+  _NavigationState createState() => _NavigationState();
 }
 
-class _NavigationBarState extends State<NavigationBar> {
+class _NavigationState extends State<Navigation> {
   int _selectedIndex = 0;
   static List<Widget> _pages = <Widget>[HomePage(), ProfilePage()];
 

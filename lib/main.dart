@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:nyf_mobile/pages/home.dart';
-import 'package:nyf_mobile/components/nav.dart';
+import 'package:nyf_mobile/pages/nav.dart';
 
 void main() => runApp(MyApp());
 
@@ -23,7 +22,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blueGrey,
       ),
-      home: NavigationBar(),
+      home: Navigation(),
     );
   }
 }
