@@ -13,27 +13,6 @@ class _TransactionListState extends State<TransactionList> {
     "Groceries",
     "Memes",
     "Memes",
-    "Memes",
-    "Memes",
-    "Memes",
-    "Memes",
-    "Memes",
-    "Memes",
-    "Memes",
-    "Memes",
-    "Memes",
-    "Memes",
-    "Memes",
-    "Memes",
-    "Memes",
-    "Memes",
-    "Memes",
-    "Memes",
-    "Memes",
-    "Memes",
-    "Memes",
-    "Memes",
-    "Memes",
   ];
 
   @override
@@ -43,9 +22,11 @@ class _TransactionListState extends State<TransactionList> {
         itemCount: entries.length,
         itemBuilder: (BuildContext context, int index) {
           return Container(
+            padding: EdgeInsets.all(16.0),
+            margin: EdgeInsets.only(bottom: 8.0, left: 8.0, right: 8.0),
             height: 50,
-            color: Colors.red,
-            child: Text('${entries[index]}'),
+            color: Colors.white,
+            child: Text('${entries[index]}', style: TextStyle(fontSize: 16.0)),
           );
         },
       ),
