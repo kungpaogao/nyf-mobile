@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nyf_mobile/components/icon_stack.dart';
 import 'package:nyf_mobile/components/user_icon.dart';
 import 'package:nyf_mobile/data/user.dart' as User;
 import 'package:nyf_mobile/data/variables.dart' as Variables;
@@ -10,12 +11,14 @@ class SelectUser extends StatefulWidget {
     this.selected,
     this.selectable = true,
     this.padding = Variables.halfMargin,
+    this.stack = false,
   }) : super(key: key);
 
   final List<User.User> users;
   final List<int> selected;
   final bool selectable;
   final double padding;
+  final bool stack;
 
   @override
   _SelectUserState createState() => _SelectUserState();
@@ -32,9 +35,11 @@ class _SelectUserState extends State<SelectUser> {
         itemBuilder: (BuildContext context, int index) {
           return Padding(
             padding: EdgeInsets.symmetric(horizontal: widget.padding),
-            child: UserIcon(
-              user: widget.users[index],
-            ),
+            child: stack
+                ? IconStack(
+                    user: widget.users[index],
+                  )
+                : UserIcon(user: widget.users[index]),
           );
         },
       ),

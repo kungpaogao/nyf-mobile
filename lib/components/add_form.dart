@@ -4,6 +4,7 @@ import 'package:nyf_mobile/components/user_icon.dart';
 import 'package:nyf_mobile/data/household.dart';
 import 'package:nyf_mobile/data/user.dart';
 import 'package:nyf_mobile/data/variables.dart' as Variables;
+import 'package:nyf_mobile/pages/review.dart';
 
 class AddForm extends StatefulWidget {
   @override
@@ -29,7 +30,7 @@ class AddFormState extends State<AddForm> {
               horizontal: Variables.margin,
             ),
             child: TextFormField(
-              decoration: const InputDecoration(
+              decoration: InputDecoration(
                 icon: Icon(
                   Icons.attach_money,
                   size: 30.0,
@@ -76,39 +77,39 @@ class AddFormState extends State<AddForm> {
               )
             ],
           ),
-          isRecurring
-              ? Container(
-                  padding: EdgeInsets.all(Variables.margin),
-                  child: Row(
-                    children: <Widget>[
-                      Text(
-                        "Billing cycle?",
-                        style: Variables.defaultText,
-                      ),
-                      Spacer(),
-                      Container(
-                        child: DropdownButton<Cycle>(
-                          value: billingCycle,
-                          onChanged: (Cycle newValue) {
-                            setState(() {
-                              billingCycle = newValue;
-                            });
-                          },
-                          items: Cycle.values.map((Cycle cycle) {
-                            String cleanText =
-                                cycle.toString().replaceAll("Cycle.", "");
-                            return DropdownMenuItem<Cycle>(
-                              child: Text(cleanText[0].toUpperCase() +
-                                  cleanText.substring(1)),
-                              value: cycle,
-                            );
-                          }).toList(),
-                        ),
-                      )
-                    ],
-                  ),
-                )
-              : Container(),
+          // isRecurring
+          //     ? Container(
+          //         padding: EdgeInsets.all(Variables.margin),
+          //         child: Row(
+          //           children: <Widget>[
+          //             Text(
+          //               "Billing cycle?",
+          //               style: Variables.defaultText,
+          //             ),
+          //             Spacer(),
+          //             Container(
+          //               child: DropdownButton<Cycle>(
+          //                 value: billingCycle,
+          //                 onChanged: (Cycle newValue) {
+          //                   setState(() {
+          //                     billingCycle = newValue;
+          //                   });
+          //                 },
+          //                 items: Cycle.values.map((Cycle cycle) {
+          //                   String cleanText =
+          //                       cycle.toString().replaceAll("Cycle.", "");
+          //                   return DropdownMenuItem<Cycle>(
+          //                     child: Text(cleanText[0].toUpperCase() +
+          //                         cleanText.substring(1)),
+          //                     value: cycle,
+          //                   );
+          //                 }).toList(),
+          //               ),
+          //             )
+          //           ],
+          //         ),
+          //       )
+          //     : Container(),
           Container(
             padding: EdgeInsets.all(Variables.margin),
             child: Row(
@@ -119,6 +120,10 @@ class AddFormState extends State<AddForm> {
                       if (_formKey.currentState.validate()) {
                         Scaffold.of(context).showSnackBar(
                             SnackBar(content: Text("Processing Data")));
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => ReviewPage()),
+                        );
                       }
                     },
                     color: Colors.blueGrey,
@@ -127,7 +132,7 @@ class AddFormState extends State<AddForm> {
                       color: Colors.white,
                     ),
                     label: Text(
-                      "SUBMIT",
+                      "REVIEW",
                       style: TextStyle(color: Colors.white),
                     ),
                   ),
