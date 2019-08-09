@@ -35,7 +35,7 @@ class _SelectUserState extends State<SelectUser> {
         itemBuilder: (BuildContext context, int index) {
           return Padding(
             padding: EdgeInsets.symmetric(horizontal: widget.padding),
-            child: stack
+            child: widget.stack
                 ? IconStack(
                     user: widget.users[index],
                   )
