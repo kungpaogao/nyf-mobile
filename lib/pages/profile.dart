@@ -11,7 +11,10 @@ class ProfilePage extends StatelessWidget {
 
   Widget _buildProfile() {
     return Column(children: <Widget>[
-      ProfileBanner(),
+      Padding(
+        padding: EdgeInsets.all(10.0),
+        child: ProfileBanner(),
+      ),
       HouseholdSettings(),
     ]);
   }
