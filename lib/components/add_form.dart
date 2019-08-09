@@ -59,6 +59,7 @@ class AddFormState extends State<AddForm> {
             height: 120,
             child: SelectUser(
               users: sampleUsers,
+              stack: true,
             ),
           ),
           Row(

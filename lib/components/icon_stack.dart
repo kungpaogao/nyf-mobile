@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:nyf_mobile/components/select_user.dart';
 import 'package:nyf_mobile/data/user.dart';
 import 'package:nyf_mobile/components/user_icon.dart';
 import 'package:nyf_mobile/data/variables.dart' as Variables;
@@ -33,13 +34,19 @@ class _IconStackState extends State<IconStack> {
           child: Container(
             width: widget.width,
             height: widget.width,
-            child: FloatingActionButton(
-              child: Icon(Icons.check),
-              backgroundColor: Colors.blueGrey,
-              foregroundColor: Colors.white,
-              elevation: 0,
+            decoration: ShapeDecoration(
+              color: Colors.blueGrey,
+              shape: CircleBorder(),
+            ),
+            child: IconButton(
+              icon: Icon(
+                Icons.check,
+              ),
+              color: Colors.white,
               onPressed: () {
                 setState(() {
+                  SelectUser.of(context).selected =
+                      SelectUser.of(context).selected.append(widget.user);
                   _visible = !_visible;
                 });
               },
