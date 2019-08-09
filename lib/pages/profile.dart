@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:nyf_mobile/components/profile_banner.dart';
+import 'package:nyf_mobile/components/household_settings.dart';
 
 class ProfilePage extends StatelessWidget {
   @override
@@ -8,8 +10,9 @@ class ProfilePage extends StatelessWidget {
   }
 
   Widget _buildProfile() {
-    return Center(
-      child: Text("This is the profile page."),
-    );
+    return Column(children: <Widget>[
+      ProfileBanner(),
+      HouseholdSettings(),
+    ]);
   }
 }
