@@ -28,17 +28,17 @@ class UserIcon extends StatelessWidget {
             color: Colors.grey,
           ),
           child: Center(
-            child: Text(user.firstName[0]),
+            child:
+                Text(user.firstName[0], style: TextStyle(fontSize: width / 4)),
           ),
         ),
         Container(
           width: width,
           margin: EdgeInsets.only(top: 5.0),
-          // padding: EdgeInsets.symmetric(),
-          child: Text(
-            user.firstName + " " + user.lastName,
-            textAlign: TextAlign.center,
-          ),
+          padding: EdgeInsets.only(top: width / 20),
+          child: Text(user.firstName + " " + user.lastName,
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: width / 5.5)),
         )
       ],
     );
