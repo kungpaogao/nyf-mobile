@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:nyf_mobile/components/select_user.dart';
 import 'package:nyf_mobile/components/user_icon.dart';
+import 'package:nyf_mobile/data/user.dart';
 
 class HouseholdSettings extends StatefulWidget {
   HouseholdSettings({Key key}) : super(key: key);
@@ -34,66 +36,11 @@ class _HouseholdSettingsState extends State<HouseholdSettings> {
           ],
         ),
         Container(
-          height: 75,
+          height: 120,
           color: Colors.white,
-          child: ListView(
-            padding: EdgeInsets.only(left: 10.0, right: 10.0),
-            scrollDirection: Axis.horizontal,
-            children: <Widget>[
-              Container(
-                child: UserIcon(width: 55, height: 55),
-                padding: EdgeInsets.all(10.0),
-              ),
-              Container(
-                child: UserIcon(width: 55, height: 55),
-                padding: EdgeInsets.all(10.0),
-              ),
-              Container(
-                child: UserIcon(width: 55, height: 55),
-                padding: EdgeInsets.all(10.0),
-              ),
-              Container(
-                child: UserIcon(width: 55, height: 55),
-                padding: EdgeInsets.all(10.0),
-              ),
-              Container(
-                child: UserIcon(width: 55, height: 55),
-                padding: EdgeInsets.all(10.0),
-              ),
-              Container(
-                child: UserIcon(width: 55, height: 55),
-                padding: EdgeInsets.all(10.0),
-              ),
-              Container(
-                child: UserIcon(width: 55, height: 55),
-                padding: EdgeInsets.all(10.0),
-              ),
-              Container(
-                child: UserIcon(width: 55, height: 55),
-                padding: EdgeInsets.all(10.0),
-              ),
-              Container(
-                child: UserIcon(width: 55, height: 55),
-                padding: EdgeInsets.all(10.0),
-              ),
-              Container(
-                child: FloatingActionButton(
-                  child: new Icon(Icons.add),
-                  backgroundColor: Colors.blueGrey,
-                  elevation: 0.0,
-                  onPressed: () {
-                    print("filled background");
-                  },
-                ),
-                padding: EdgeInsets.all(10.0),
-              ),
-            ],
+          child: SelectUser(
+            users: sampleUsers,
           ),
-        ),
-        Container(
-          height: 50,
-          color: Colors.white,
-          child: Center(child: Text('Entry C')),
         ),
       ],
     );

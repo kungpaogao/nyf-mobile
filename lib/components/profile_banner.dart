@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:nyf_mobile/components/user_icon.dart';
+import 'package:nyf_mobile/data/user.dart';
 
 class ProfileBanner extends StatelessWidget {
   @override
@@ -14,10 +15,7 @@ class ProfileBanner extends StatelessWidget {
         children: <Widget>[
           Padding(
               padding: EdgeInsets.only(top: 32.0),
-              child: UserIcon(width: 150, height: 150)),
-          Padding(
-              padding: EdgeInsets.only(top: 12.0, bottom: 12.0),
-              child: Text("John Doe", style: TextStyle(fontSize: 28.0))),
+              child: UserIcon(width: 150, height: 150, user: sampleUsers[0])),
         ],
       ),
     );

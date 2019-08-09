@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nyf_mobile/pages/add.dart';
 import 'package:nyf_mobile/pages/home.dart';
 import 'package:nyf_mobile/pages/profile.dart';
 
@@ -38,6 +39,12 @@ class _NavigationState extends State<Navigation> {
       floatingActionButton: FloatingActionButton(
         tooltip: 'Increment',
         child: new Icon(Icons.add),
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => AddPage()),
+          );
+        },
       ),
     );
   }
