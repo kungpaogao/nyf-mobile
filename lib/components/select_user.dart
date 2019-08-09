@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nyf_mobile/components/user_icon.dart';
 import 'package:nyf_mobile/data/user.dart' as User;
+import 'package:nyf_mobile/data/variables.dart' as Variables;
 
 class SelectUser extends StatefulWidget {
   SelectUser({
@@ -8,7 +9,7 @@ class SelectUser extends StatefulWidget {
     this.users,
     this.selected,
     this.selectable = true,
-    this.padding = 10,
+    this.padding = Variables.halfMargin,
   }) : super(key: key);
 
   final List<User.User> users;
@@ -25,7 +26,7 @@ class _SelectUserState extends State<SelectUser> {
   Widget build(BuildContext context) {
     return Container(
       child: ListView.builder(
-        padding: EdgeInsets.only(left: 10.0, right: 10.0),
+        padding: EdgeInsets.symmetric(horizontal: Variables.halfMargin),
         scrollDirection: Axis.horizontal,
         itemCount: widget.users.length,
         itemBuilder: (BuildContext context, int index) {

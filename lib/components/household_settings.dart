@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:nyf_mobile/components/dark_mode.dart';
 import 'package:nyf_mobile/components/select_user.dart';
 import 'package:nyf_mobile/components/user_icon.dart';
+import 'package:nyf_mobile/data/household.dart';
 import 'package:nyf_mobile/data/user.dart';
 
 class HouseholdSettings extends StatefulWidget {
@@ -13,7 +14,7 @@ class HouseholdSettings extends StatefulWidget {
 }
 
 class _HouseholdSettingsState extends State<HouseholdSettings> {
-  String dropdownValue = 'Weekly';
+  Cycle billingCycle = Cycle.weekly;
 
   @override
   Widget build(BuildContext context) {
@@ -54,18 +55,20 @@ class _HouseholdSettingsState extends State<HouseholdSettings> {
               ),
               Container(
                 padding: EdgeInsets.only(right: 10.0),
-                child: DropdownButton<String>(
-                  value: dropdownValue,
-                  onChanged: (String newValue) {
+                child: DropdownButton<Cycle>(
+                  value: billingCycle,
+                  onChanged: (Cycle newValue) {
                     setState(() {
-                      dropdownValue = newValue;
+                      billingCycle = newValue;
                     });
                   },
-                  items: <String>['Immediately', 'Daily', 'Weekly', 'Monthly']
-                      .map<DropdownMenuItem<String>>((String value) {
-                    return DropdownMenuItem<String>(
-                      value: value,
-                      child: Text(value),
+                  items: Cycle.values.map((Cycle cycle) {
+                    String cleanText =
+                        cycle.toString().replaceAll("Cycle.", "");
+                    return DropdownMenuItem<Cycle>(
+                      child: Text(
+                          cleanText[0].toUpperCase() + cleanText.substring(1)),
+                      value: cycle,
                     );
                   }).toList(),
                 ),

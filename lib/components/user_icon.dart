@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:nyf_mobile/data/user.dart';
+import 'package:nyf_mobile/data/variables.dart' as Variables;
 
 class UserIcon extends StatelessWidget {
   final double width;
@@ -8,8 +9,8 @@ class UserIcon extends StatelessWidget {
   final User user;
 
   UserIcon({
-    this.width = 55.0,
-    this.height = 90,
+    this.width = Variables.userIconWidth,
+    this.height = Variables.userIconHeight,
     this.user,
   });
 
