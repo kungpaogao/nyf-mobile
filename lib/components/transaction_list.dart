@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/data/transaction.dart';
+import 'package:nyf_mobile/data/transaction.dart';
+import 'package:nyf_mobile/components/transaction_item.dart';
 
 class TransactionList extends StatefulWidget {
   TransactionList({Key key}) : super(key: key);
@@ -10,28 +11,10 @@ class TransactionList extends StatefulWidget {
 }
 
 class _TransactionListState extends State<TransactionList> {
-  List<String> entries = <String>[
-    "Toilet Paper",
-    "Groceries",
-    "Memes",
-    "Memes",
-  ];
+  List<Transaction> transactions = sampleTrans;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: ListView.builder(
-        itemCount: entries.length,
-        itemBuilder: (BuildContext context, int index) {
-          return Container(
-            padding: EdgeInsets.all(16.0),
-            margin: EdgeInsets.only(bottom: 8.0, left: 8.0, right: 8.0),
-            height: 50,
-            color: Colors.white,
-            child: Text('${entries[index]}', style: TextStyle(fontSize: 16.0)),
-          );
-        },
-      ),
-    );
+    return TransactionItem(transactions: transactions);
   }
 }
