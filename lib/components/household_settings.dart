@@ -24,7 +24,7 @@ class _HouseholdSettingsState extends State<HouseholdSettings> {
             Expanded(
               child: Container(
                 color: Colors.white,
-                padding: EdgeInsets.only(top: 12.0, left: 12.0, right: 12.0),
+                padding: EdgeInsets.all(12.0),
                 child: Text("The Best Household",
                     style: TextStyle(
                       fontSize: 16.0,

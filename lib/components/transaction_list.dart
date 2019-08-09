@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/data/transaction.dart';
 
 class TransactionList extends StatefulWidget {
   TransactionList({Key key}) : super(key: key);
