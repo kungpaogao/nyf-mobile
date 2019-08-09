@@ -13,12 +13,13 @@ class Navigation extends StatefulWidget {
 class _NavigationState extends State<Navigation> {
   int _selectedIndex = 0;
   static List<Widget> _pages = <Widget>[HomePage(), ProfilePage()];
+  static List<String> _pageNames = <String>["Not Your Family", "Profile"];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Hello"),
+        title: Text("${_pageNames[_selectedIndex]}"),
       ),
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(

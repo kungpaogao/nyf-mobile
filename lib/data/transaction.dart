@@ -32,11 +32,31 @@ List<Transaction> sampleTrans = [
   Transaction(
       "house-1",
       "memes",
-      (new DateTime(2019, 8, 8)),
-      26,
+      (new DateTime(2019, 8, 7)),
+      16.01,
       [
-        UserAmt("user-1", 19),
-        UserAmt("user-2", 7),
+        UserAmt("user-1", 9),
+        UserAmt("user-2", 7.01),
+      ],
+      "user-1"),
+  Transaction(
+      "house-1",
+      "water",
+      (new DateTime(2019, 8, 7)),
+      8.35,
+      [
+        UserAmt("user-1", 2),
+        UserAmt("user-2", 6.35),
+      ],
+      "user-1"),
+  Transaction(
+      "house-1",
+      "groceries",
+      (new DateTime(2019, 8, 6)),
+      13.53,
+      [
+        UserAmt("user-1", 6.20),
+        UserAmt("user-2", 7.33),
       ],
       "user-1"),
 ];

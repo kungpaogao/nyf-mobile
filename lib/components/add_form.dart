@@ -93,7 +93,7 @@ class AddFormState extends State<AddForm> {
                 },
               ),
               Text(
-                "Recurring fee?",
+                "Recurring monthly transaction",
                 style: Variables.defaultText,
               )
             ],
@@ -153,7 +153,7 @@ class AddFormState extends State<AddForm> {
                       color: Colors.white,
                     ),
                     label: Text(
-                      ("Submit").toUpperCase(),
+                      ("Review").toUpperCase(),
                       style: TextStyle(color: Colors.white),
                     ),
                   ),

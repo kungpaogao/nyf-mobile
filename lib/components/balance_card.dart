@@ -43,7 +43,7 @@ class _BalanceCardState extends State<BalanceCard> {
                     child: Padding(
                       padding: EdgeInsets.only(top: 12.0),
                       child: Text(
-                        "\$105.69",
+                        "\$69.85",
                         style: balanceStyle,
                       ),
                     ),

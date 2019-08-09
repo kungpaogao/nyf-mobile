@@ -13,7 +13,13 @@ class User {
 
 List<User> sampleUsers = [
   User("John", "Smith", "johnsmith", ["transaction-1", "transaction-2"]),
-  User("James", "Smith", "jamessmith", ["transaction-1", "transaction-3"]),
+  User("Rich", "", "rich", ["transaction-1", "transaction-3"]),
+  User("Linus", "Torvalds", "linustorvalds",
+      ["transaction-1", "transaction-3", "transaction-2"]),
+  User("Tim", "Cook", "Tim Cook",
+      ["transaction-1", "transaction-3", "transaction-2"]),
+  User("Elon", "Musk", "elonmusk",
+      ["transaction-1", "transaction-3", "transaction-2"]),
   User("Jane", "Smith", "janesmith",
       ["transaction-1", "transaction-3", "transaction-2"]),
 ];

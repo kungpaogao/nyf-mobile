@@ -96,7 +96,7 @@ class _HouseholdSettingsState extends State<HouseholdSettings> {
                   Container(
                     width: 10,
                   ),
-                  Icon(Icons.arrow_forward_ios),
+                  Icon(Icons.navigate_next),
                 ],
               )
             ],
@@ -114,7 +114,7 @@ class _HouseholdSettingsState extends State<HouseholdSettings> {
               Text("Change Email & Password", style: TextStyle(fontSize: 16.0)),
               Row(
                 children: <Widget>[
-                  Icon(Icons.arrow_forward_ios),
+                  Icon(Icons.navigate_next),
                 ],
               )
             ],
@@ -132,7 +132,7 @@ class _HouseholdSettingsState extends State<HouseholdSettings> {
               Text("Feedback & Support", style: TextStyle(fontSize: 16.0)),
               Row(
                 children: <Widget>[
-                  Icon(Icons.arrow_forward_ios),
+                  Icon(Icons.navigate_next),
                 ],
               )
             ],
