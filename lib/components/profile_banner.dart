@@ -14,8 +14,8 @@ class ProfileBanner extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Padding(
-              padding: EdgeInsets.only(top: 32.0, bottom: 32.0),
-              child: UserIcon(width: 150, height: 150, user: sampleUsers[0])),
+              padding: EdgeInsets.only(top: 32.0),
+              child: UserIcon(width: 125, height: 150, user: sampleUsers[0])),
         ],
       ),
     );
