@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
     return Column(
       children: <Widget>[
         Padding(
-          padding: EdgeInsets.all(16.0),
+          padding: EdgeInsets.all(20.0),
           child: BalanceCard(),
         ),
         Expanded(
