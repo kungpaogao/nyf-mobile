@@ -15,8 +15,10 @@ class _ReviewFormState extends State<ReviewForm> {
   @override
   Widget build(BuildContext context) {
     List<UserAmt> people = widget.transaction.people;
+
     return Form(
-      child: Container(
+      child: SizedBox(
+        height: 500,
         child: ListView.builder(
           itemCount: people.length,
           itemBuilder: (BuildContext context, int index) {

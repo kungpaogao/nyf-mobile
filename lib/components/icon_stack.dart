@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:nyf_mobile/components/add_form.dart';
 import 'package:nyf_mobile/components/select_user.dart';
 import 'package:nyf_mobile/data/user.dart';
 import 'package:nyf_mobile/components/user_icon.dart';
@@ -45,8 +46,13 @@ class _IconStackState extends State<IconStack> {
               color: Colors.white,
               onPressed: () {
                 setState(() {
-                  SelectUser.of(context).selected =
-                      SelectUser.of(context).selected.append(widget.user);
+                  // if (!_visible)
+                  //   AddForm.of(context).selected =
+                  //       AddForm.of(context).selected.add(widget.user.username);
+                  // else
+                  //   AddForm.of(context).selected = AddForm.of(context)
+                  //       .selected
+                  //       .remove(widget.user.username);
                   _visible = !_visible;
                 });
               },

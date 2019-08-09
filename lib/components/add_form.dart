@@ -11,12 +11,31 @@ class AddForm extends StatefulWidget {
   AddFormState createState() {
     return AddFormState();
   }
+
+  static AddFormState of(BuildContext context) {
+    final AddFormState navigator =
+        context.ancestorStateOfType(const TypeMatcher<AddFormState>());
+
+    assert(() {
+      if (navigator == null) {
+        throw new FlutterError("Buddy!");
+      }
+      return true;
+    }());
+
+    return navigator;
+  }
 }
 
 class AddFormState extends State<AddForm> {
   final _formKey = GlobalKey<FormState>();
   bool isRecurring = false;
   Cycle billingCycle = Cycle.weekly;
+  List<String> _selected = ["yo"];
+
+  set selected(List<String> val) => setState(() => _selected = val);
+
+  get selected => _selected;
 
   @override
   Widget build(BuildContext context) {
@@ -62,6 +81,7 @@ class AddFormState extends State<AddForm> {
               stack: true,
             ),
           ),
+          // Text(selected.toString()),
           Row(
             children: <Widget>[
               Checkbox(
@@ -121,10 +141,10 @@ class AddFormState extends State<AddForm> {
                       if (_formKey.currentState.validate()) {
                         Scaffold.of(context).showSnackBar(
                             SnackBar(content: Text("Processing Data")));
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => ReviewPage()),
-                        );
+                        // Navigator.push(
+                        //   context,
+                        //   MaterialPageRoute(builder: (context) => ReviewPage()),
+                        // );
                       }
                     },
                     color: Colors.blueGrey,
@@ -133,7 +153,7 @@ class AddFormState extends State<AddForm> {
                       color: Colors.white,
                     ),
                     label: Text(
-                      "REVIEW",
+                      ("Submit").toUpperCase(),
                       style: TextStyle(color: Colors.white),
                     ),
                   ),

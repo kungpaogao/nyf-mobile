@@ -8,41 +8,19 @@ class SelectUser extends StatefulWidget {
   SelectUser({
     Key key,
     this.users,
-    this.selected,
     this.padding = Variables.halfMargin,
     this.stack = false,
   }) : super(key: key);
 
   final List<User.User> users;
-  final List<String> selected;
   final double padding;
   final bool stack;
 
   @override
   _SelectUserState createState() => _SelectUserState();
-
-  static _SelectUserState of(BuildContext context) {
-    final _SelectUserState navigator =
-        context.ancestorStateOfType(const TypeMatcher<_SelectUserState>());
-
-    assert(() {
-      if (navigator == null) {
-        throw new FlutterError("Buddy!");
-      }
-      return true;
-    }());
-
-    return navigator;
-  }
 }
 
 class _SelectUserState extends State<SelectUser> {
-  List<String> _selected = [];
-
-  set selected(List<String> val) => setState(() => _selected = val);
-
-  get selected => _selected;
-
   @override
   Widget build(BuildContext context) {
     return Container(
